@@ -157,91 +157,65 @@
     }
 
     @keyframes floatUp {
-        0% {
-            transform: translateY(0) scale(0.8);
-            opacity: 0;
-        }
-        20% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(-120vh) scale(1.4);
-            opacity: 0;
-        }
+        0% { transform: translateY(0) scale(0.8); opacity: 0; }
+        20% { opacity: 1; }
+        100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
     }
 </style>
 </head>
 
 <body>
 
-<!-- Background slideshow -->
 <div class="bg-slideshow">
-    <img src="https://drive.google.com/uc?export=view&id=1D2WNAE-GY_nghENnAsB0SbC05L-UJb-v">
-    <img src="https://drive.google.com/uc?export=view&id=1bBweDp1ziqYcakfTTwA0xyQ5n08iRrke">
-    <img src="https://drive.google.com/uc?export=view&id=1HoecwsFtSMfrZtMjSK8Jmc9G7DP2EgJu8">
-    <img src="https://drive.google.com/uc?export=view&id=1IUsDCtOKOAQleNoxnnL-hGrBSDr-PRCw">
+    <img src="bg1.jpg">
+    <img src="bg2.jpg">
+    <img src="bg3.jpg">
+    <img src="bg4.jpg">
 </div>
 
-<!-- BG texts -->
-<div class="bg-text" id="bg2-text">
-    You are the most beautiful part of my life ❤️
-</div>
+<div class="bg-text" id="bg2-text">You are the most beautiful part of my life ❤️</div>
+<div class="bg-text" id="bg3-text">Every moment with you feels like magic ✨</div>
+<div class="bg-text" id="bg4-text">My heart will always belong to you ❤️</div>
 
-<div class="bg-text" id="bg3-text">
-    Every moment with you feels like magic ✨
-</div>
-
-<div class="bg-text" id="bg4-text">
-    My heart will always belong to you ❤️
-</div>
-
-<!-- Main content (BG1) -->
 <div class="content" id="main-content">
     <h1>Happy Birthday ❤️</h1>
     <h2>To My Beautiful Wife</h2>
 
     <div class="message">
-        Every moment with you is a gift.  
-        You fill my life with love, joy, and endless happiness.  
-        Today is your day — and I want to celebrate the amazing person you are.  
-        I love you more than words can ever express.
+        Every moment with you is a gift. You fill my life with love, joy, and endless happiness. Today is your day — and I want to celebrate the amazing person you are. I love you more than words can ever express.
     </div>
 
     <div class="photo">
-        <img src="https://drive.google.com/uc?export=view&id=1VCIYUtGAdujnMYpDaAY9gexBTi3mS76r" alt="Our Photo">
+        <img src="your-photo.jpg" alt="Our Photo">
     </div>
 </div>
 
-<!-- Photo Gallery -->
 <div class="gallery-section">
     <h2>Our Beautiful Memories Together</h2>
 
     <div class="gallery">
-
         <div class="gallery-item">
-            <img src="https://drive.google.com/uc?export=view&id=G1_ID" alt="">
+            <img src="g1.jpg">
             <div class="caption">The day we laughed endlessly ❤️</div>
         </div>
 
         <div class="gallery-item">
-            <img src="https://drive.google.com/uc?export=view&id=G2_ID" alt="">
+            <img src="g2.jpg">
             <div class="caption">Your smile makes everything brighter ✨</div>
         </div>
 
         <div class="gallery-item">
-            <img src="https://drive.google.com/uc?export=view&id=G3_ID" alt="">
+            <img src="g3.jpg">
             <div class="caption">One of my favorite moments with you 💕</div>
         </div>
 
         <div class="gallery-item">
-            <img src="https://drive.google.com/uc?export=view&id=G4_ID" alt="">
+            <img src="g4.jpg">
             <div class="caption">Forever my happy place ❤️</div>
         </div>
-
     </div>
 </div>
 
-<!-- Floating Hearts -->
 <div class="hearts-container"></div>
 
 <script>
@@ -257,15 +231,9 @@
         let scrollPos = window.scrollY;
         let index = Math.floor(scrollPos / (document.body.scrollHeight / total));
 
-        if (index < 0) index = 0;
-        if (index > total - 1) index = total - 1;
-
-        images.forEach((img, i) => {
-            img.style.opacity = i === index ? 1 : 0;
-        });
+        images.forEach((img, i) => img.style.opacity = i === index ? 1 : 0);
 
         mainContent.style.opacity = index === 0 ? 1 : 0;
-
         bg2Text.style.opacity = index === 1 ? 1 : 0;
         bg3Text.style.opacity = index === 2 ? 1 : 0;
         bg4Text.style.opacity = index === 3 ? 1 : 0;
@@ -275,17 +243,10 @@
         const heart = document.createElement("div");
         heart.classList.add("heart");
         heart.innerHTML = "❤️";
-
-        const size = Math.random() * 20 + 15;
-        heart.style.fontSize = size + "px";
-
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
         heart.style.left = Math.random() * 100 + "vw";
-
         document.querySelector(".hearts-container").appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 6000);
+        setTimeout(() => heart.remove(), 6000);
     }
 
     setInterval(createHeart, 500);
@@ -293,4 +254,3 @@
 
 </body>
 </html>
-
