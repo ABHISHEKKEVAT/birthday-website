@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        color: white;
+        height: 500vh;
+    }
+
+    .bg-slideshow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        overflow: hidden;
+    }
+
+    .bg-slideshow img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+
+    .bg-text {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: red;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+        z-index: 4;
+        text-align: center;
+        padding: 20px;
+        max-width: 90vw;
+    }
+
+    .content {
+        position: relative;
+        padding: 80px 20px;
+        max-width: 700px;
+        margin: auto;
+        text-align: center;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .message {
+        background: rgba(0,0,0,0.4);
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        color: white;
+        line-height: 1.6;
+        margin-top: 40px;
+    }
+
+    .photo img {
+        width: 260px;
+        border-radius: 12px;
+        margin-top: 40px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .gallery-section {
+        margin-top: 200px;
+        text-align: center;
+        color: white;
+        z-index: 3;
+        position: relative;
+    }
+
+    .gallery-section h2 {
+        background: rgba(0,0,0,0.4);
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 2.2rem;
+        color: white;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 0 20px;
+        margin-bottom: 80px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 15px;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        font-size: 1.1rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover .caption {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hearts-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 5;
+    }
+
+    .heart {
+        position: absolute;
+        bottom: -20px;
+        color: rgba(255, 0, 80, 0.8);
+        font-size: 20px;
+        animation: floatUp 6s linear infinite;
+        opacity: 0;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0) scale(0.8); opacity: 0; }
+        20% { opacity: 1; }
+        100% { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="bg-slideshow">
+    <img src="bg1.jpg">
+    <img src="bg2.jpg">
+    <img src="bg3.jpg">
+    <img src="bg4.JPG">
+</div>
+
+<div class="bg-text" id="bg2-text">You are the most beautiful part of my life ❤️</div>
+<div class="bg-text" id="bg3-text">Every moment with you feels like magic ✨</div>
+<div class="bg-text" id="bg4-text"> will You Marry Me Disha❤️</div>
+
+<div class="content" id="main-content">
+    <h1>Happy Birthday ❤️</h1>
+    <h1>To My Beautiful Girl DISHU ❤️</h1>
+
+    <div class="message">
+        Every moment with you is a gift. You fill my life with love, joy, and endless happiness. Today is your day — and I want to celebrate the amazing person you are. I love you more than words can ever express.
+    </div>
+
+    <div class="photo">
+        <img src="your-photo.jpg" alt="Our Photo">
+    </div>
+</div>
+
+<div class="gallery-section">
+    <h2>Our Beautiful Memories Together</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="g1.jpg">
+            <div class="caption">The day we laughed endlessly ❤️</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="g2.jpg">
+            <div class="caption">Your smile makes everything brighter ✨</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="g31.jpg">
+            <div class="caption">One of my favorite moments with you 💕</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="g4.jpg">
+            <div class="caption">Forever my happy place ❤️</div>
+        </div>
+    </div>
+</div>
+
+<div class="hearts-container"></div>
+
+<script>
+    const images = document.querySelectorAll('.bg-slideshow img');
+    const total = images.length;
+
+    const bg2Text = document.getElementById('bg2-text');
+    const bg3Text = document.getElementById('bg3-text');
+    const bg4Text = document.getElementById('bg4-text');
+    const mainContent = document.getElementById('main-content');
+
+    window.addEventListener('scroll', () => {
+        let scrollPos = window.scrollY;
+        let index = Math.floor(scrollPos / (document.body.scrollHeight / total));
+
+        images.forEach((img, i) => img.style.opacity = i === index ? 1 : 0);
+
+        mainContent.style.opacity = index === 0 ? 1 : 0;
+        bg2Text.style.opacity = index === 1 ? 1 : 0;
+        bg3Text.style.opacity = index === 2 ? 1 : 0;
+        bg4Text.style.opacity = index === 3 ? 1 : 0;
+    });
+
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        heart.style.left = Math.random() * 100 + "vw";
+        document.querySelector(".hearts-container").appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
