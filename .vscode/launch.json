@@ -10,7 +10,7 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open index1.html",
+            "name": "Open index.html",
             "file": "e:\\vscode\\disha-birthday-page\\index1.html"
         }
     ]
